@@ -34,7 +34,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
     padding: 30px 0; /* primer valor es padding top y bottom, segundo valor es padding izquierdo y derecho*/
-    background-color: r (0,0,0,0.848);
+    background-color: rgba(0,0,0,0.848);
 }
 
 #movieList h1{

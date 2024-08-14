@@ -3,6 +3,7 @@ const button = document.querySelector("#getMovieList")
 const movieList = document.querySelector("#movieList")
 const displayMovies = ()=>{
     const movieList = document.querySelector("#movieList")
+    console.log("movies renderizando")
 }
 
 
