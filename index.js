@@ -1,75 +1,31 @@
 const button = document.querySelector("#getMovieList")
-
+const displayMovies = (data) => {
 const movieList = document.querySelector("#movieList")
-const displayMovies = ()=>{
-    const movieList = document.querySelector("#movieList")
+const cardArray = data.Search.map((movie)=>{
+  return` <li class="card">
+        <div class="poster">
+          <img
+            src=${movie.Poster}
+            alt=${movie.Title}
+        </div>
+        <h1>${movie.Title}</h1>
+        <h2>${movie.Year}</h2>
+      </li>`
+})
 
-   movieList.innerHTML = ` 
-     <li class="card">
-        <div class="poster">
-          <img
-            src="https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg"
-            alt="poster guardianes de la galaxia" />
-        </div>
-        <h1>Guardianes de la Galaxia</h1>
-        <h2>2017</h2>
-      </li>
-      <li class="card">
-        <div class="poster">
-          <img
-            src="https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg"
-            alt="poster guardianes de la galaxia" />
-        </div>
-        <h1>Guardianes de la Galaxia</h1>
-        <h2>2017</h2>
-      </li>
-      <li class="card">
-        <div class="poster">
-          <img
-            src="https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg"
-            alt="poster guardianes de la galaxia" />
-        </div>
-        <h1>Guardianes de la Galaxia</h1>
-        <h2>2017</h2>
-      </li>
-      <li class="card">
-        <div class="poster">
-          <img
-            src="https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg"
-            alt="poster guardianes de la galaxia" />
-        </div>
-        <h1>Guardianes de la Galaxia</h1>
-        <h2>2017</h2>
-      </li>
-      <li class="card">
-        <div class="poster">
-          <img
-            src="https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg"
-            alt="poster guardianes de la galaxia" />
-        </div>
-        <h1>Guardianes de la Galaxia</h1>
-        <h2>2017</h2>
-      </li>
-
-  
-   `;
-
-
+   movieList.innerHTML = cardArray.join("")
     console.log("movies renderizando")
+
 }
-
-
-
 const getHorrorMovies = () => {
-  const apiKey = "cb657900"
+  const apiKey = process.env.API_KEY
   const searchQuery = "horror"
   const apiEndPoint = `https://www.omdbapi.com/?s=${searchQuery}&apikey=${apiKey}`
   //fetch es una funcion que nos permite hacer peticiones a una api, y devuelve algo que se llama promesa
   fetch(apiEndPoint).then((response)=>{
     return response.json()
   }).then((data)=>{
-    const horrorMovies = data.search
-    console.log(data)
+displayMovies(data);
   })
 }
     
