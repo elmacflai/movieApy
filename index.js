@@ -4,7 +4,55 @@ const movieList = document.querySelector("#movieList")
 const displayMovies = ()=>{
     const movieList = document.querySelector("#movieList")
 
-   // movieList.innerHTML = ` `;
+   movieList.innerHTML = ` 
+     <li class="card">
+        <div class="poster">
+          <img
+            src="https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg"
+            alt="poster guardianes de la galaxia" />
+        </div>
+        <h1>Guardianes de la Galaxia</h1>
+        <h2>2017</h2>
+      </li>
+      <li class="card">
+        <div class="poster">
+          <img
+            src="https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg"
+            alt="poster guardianes de la galaxia" />
+        </div>
+        <h1>Guardianes de la Galaxia</h1>
+        <h2>2017</h2>
+      </li>
+      <li class="card">
+        <div class="poster">
+          <img
+            src="https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg"
+            alt="poster guardianes de la galaxia" />
+        </div>
+        <h1>Guardianes de la Galaxia</h1>
+        <h2>2017</h2>
+      </li>
+      <li class="card">
+        <div class="poster">
+          <img
+            src="https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg"
+            alt="poster guardianes de la galaxia" />
+        </div>
+        <h1>Guardianes de la Galaxia</h1>
+        <h2>2017</h2>
+      </li>
+      <li class="card">
+        <div class="poster">
+          <img
+            src="https://www.vintagemovieposters.co.uk/wp-content/uploads/2020/11/IMG_5878-scaled.jpeg"
+            alt="poster guardianes de la galaxia" />
+        </div>
+        <h1>Guardianes de la Galaxia</h1>
+        <h2>2017</h2>
+      </li>
+
+  
+   `;
 
 
     console.log("movies renderizando")
